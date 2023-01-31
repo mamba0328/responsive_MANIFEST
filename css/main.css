@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Red+Hat+Display:ital,wght@0,600;1,400&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -343,6 +343,11 @@ template {
 
 ul {
   list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 0;
 }
 
 * {
@@ -361,6 +366,11 @@ body {
 
 .container {
   max-width: 1440px;
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    padding: 0 135px !important;
+  }
 }
 
 .navbar-toggler {
@@ -389,7 +399,10 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .first-screen__slogan {
+    margin: 0 !important;
     font-size: 3rem;
+    left: 135px;
+    top: 100px;
   }
 }
 @media screen and (max-width: 572px) {
@@ -429,6 +442,131 @@ body {
   padding-right: 85px;
 }
 
-.blog__title {
+.section-title {
   font-size: 3rem;
+}
+.section-title_sml {
+  font-size: 1.75rem;
+}
+.section-title_has-arrow {
+  position: relative;
+  width: 100%;
+}
+.section-title_has-arrow::before {
+  content: "View All";
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  color: #7B7B7B;
+  position: absolute;
+  top: 8px;
+  right: 30px;
+}
+.section-title_has-arrow::after {
+  content: url("../assets/imgs/icons/Arrow 1.png");
+  position: absolute;
+  right: 0;
+}
+@media screen and (max-width: 572px) {
+  .section-title_has-arrow::before {
+    content: "View All";
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    color: #7B7B7B;
+    position: absolute;
+    top: 35px;
+    left: 0;
+  }
+  .section-title_has-arrow::after {
+    content: url("../assets/imgs/icons/Arrow 1.png");
+    position: absolute;
+    top: 25px;
+    left: 75px;
+  }
+}
+
+.post__theme, .post__date {
+  color: #7B7B7B;
+}
+.post__desc {
+  font-family: "Lato", sans-serif;
+  color: #565656;
+  line-height: 166%;
+}
+
+.more-arrow {
+  font-size: 1rem;
+  color: #7B7B7B;
+}
+@media screen and (max-width: 572px) {
+  .more-arrow {
+    display: none;
+  }
+}
+@media screen and (max-width: 572px) {
+  .more-arrow_permanent {
+    display: block;
+  }
+}
+
+.more-btn {
+  font-family: "Lato", sans-serif;
+  max-width: 180px;
+  font-weight: 700;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: #565656;
+  border: none;
+  color: #FFF;
+  margin: 60px auto 0;
+}
+
+.info-block__title {
+  position: relative;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  letter-spacing: 10%;
+}
+.info-block__desc {
+  font-family: "Lato", sans-serif;
+  color: #565656;
+  font-weight: 400;
+}
+
+.footer {
+  background-color: #F4F4F4;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.social__link {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 0px 1px #565656;
+}
+.social__link:hover {
+  background-color: #565656;
+}
+.social__link:hover .icon {
+  fill: white;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #565656;
+}
+
+.twitter {
+  -webkit-transform: scale(1.2) translateY(2px);
+          transform: scale(1.2) translateY(2px);
 }
