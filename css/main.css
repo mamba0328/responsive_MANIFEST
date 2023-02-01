@@ -430,8 +430,8 @@ body {
   content: "";
   position: absolute;
   bottom: 5px;
-  left: 15%;
-  width: 70%;
+  left: 25%;
+  width: 50%;
   height: 1px;
   background-color: #000;
 }
@@ -462,9 +462,10 @@ body {
   right: 30px;
 }
 .section-title_has-arrow::after {
-  content: url("../assets/imgs/icons/Arrow 1.png");
+  content: url("../assets/imgs/svg/Arrow 1.svg");
   position: absolute;
   right: 0;
+  top: -2px;
 }
 @media screen and (max-width: 572px) {
   .section-title_has-arrow::before {
@@ -477,7 +478,7 @@ body {
     left: 0;
   }
   .section-title_has-arrow::after {
-    content: url("../assets/imgs/icons/Arrow 1.png");
+    content: url("../assets/imgs/svg/Arrow 1.svg");
     position: absolute;
     top: 25px;
     left: 75px;
@@ -485,6 +486,7 @@ body {
 }
 
 .post__theme, .post__date {
+  font-size: 0.75rem;
   color: #7B7B7B;
 }
 .post__desc {
@@ -494,6 +496,9 @@ body {
 }
 
 .more-arrow {
+  position: relative;
+  right: 10px;
+  bottom: 2px;
   font-size: 1rem;
   color: #7B7B7B;
 }
@@ -501,6 +506,10 @@ body {
   .more-arrow {
     display: none;
   }
+}
+.more-arrow_permanent {
+  left: 3px;
+  bottom: 6px;
 }
 @media screen and (max-width: 572px) {
   .more-arrow_permanent {
@@ -540,7 +549,6 @@ body {
 .socials {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 25px;
 }
 

@@ -82,8 +82,8 @@ body {
         content: '';
         position: absolute;
         bottom: 5px;
-        left: 15%;
-        width: 70%;
+        left: 25%;
+        width: 50%;
         height: 1px;
         background-color: #000;
     }
@@ -117,9 +117,10 @@ body {
         }
 
         &::after {
-            content: url('../assets/imgs/icons/Arrow\ 1.png');
+            content: url('../assets/imgs/svg/Arrow\ 1.svg');
             position: absolute;
             right: 0;
+            top: -2px;
         }
 
         @media screen and (max-width:572px) {
@@ -134,7 +135,7 @@ body {
             }
 
             &::after {
-                content: url('../assets/imgs/icons/Arrow\ 1.png');
+                content: url('../assets/imgs/svg/Arrow\ 1.svg');
                 position: absolute;
                 top: 25px;
                 left: 75px;
@@ -147,6 +148,7 @@ body {
 
     &__theme,
     &__date {
+        font-size: 0.75rem;
         color: $info-gray;
     }
 
@@ -158,6 +160,9 @@ body {
 }
 
 .more-arrow {
+    position: relative;
+    right: 10px;
+    bottom: 2px;
     font-size: 1rem;
     color: $info-gray;
 
@@ -166,6 +171,9 @@ body {
     }
 
     &_permanent {
+        left: 3px;
+        bottom: 6px;
+
         @media screen and (max-width:572px) {
             display: block;
         }
