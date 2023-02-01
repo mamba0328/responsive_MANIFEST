@@ -379,11 +379,27 @@ body {
 
 .first-screen {
   position: relative;
+  background-image: url(../assets/imgs/fscreen.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .first-screen {
+    background-image: url("../assets/imgs/fscreen__tablet.png");
+    height: 320px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .first-screen {
+    background-image: url("../assets/imgs/bg-image_sm.png");
+    min-height: 500px;
+  }
 }
 .first-screen__slogan {
-  position: absolute;
   font-size: 2rem;
-  margin-left: 10px;
   line-height: 1.5;
   font-weight: 600;
 }
@@ -399,10 +415,7 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .first-screen__slogan {
-    margin: 0 !important;
     font-size: 3rem;
-    left: 135px;
-    top: 100px;
   }
 }
 @media screen and (max-width: 572px) {
@@ -425,6 +438,7 @@ body {
   letter-spacing: 3px;
   position: relative;
   color: #000;
+  font-size: 0.9rem;
 }
 .nav-link:hover::after {
   content: "";
@@ -488,6 +502,9 @@ body {
 .post__theme, .post__date {
   font-size: 0.75rem;
   color: #7B7B7B;
+}
+.post__theme_lg, .post__date_lg {
+  font-size: 1rem;
 }
 .post__desc {
   font-family: "Lato", sans-serif;

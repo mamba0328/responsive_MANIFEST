@@ -32,11 +32,25 @@ body {
 
 .first-screen {
     position: relative;
+    background-image: url(../assets/imgs/fscreen.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    width: 100%;
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        background-image: url("../assets/imgs/fscreen__tablet.png");
+        height: 320px;
+    }
+
+    @media screen and (max-width: 767px) {
+        background-image: url("../assets/imgs/bg-image_sm.png");
+        min-height: 500px;
+    }
 
     &__slogan {
-        position: absolute;
         font-size: 2rem;
-        margin-left: 10px;
         line-height: 1.5;
         font-weight: 600;
 
@@ -49,10 +63,7 @@ body {
         }
 
         @media screen and (min-width:1440px) {
-            margin: 0 !important;
             font-size: 3rem;
-            left: 135px;
-            top: 100px;
         }
     }
 
@@ -77,6 +88,7 @@ body {
     letter-spacing: 3px;
     position: relative;
     color: #000;
+    font-size: 0.9rem;
 
     &:hover::after {
         content: '';
@@ -150,6 +162,10 @@ body {
     &__date {
         font-size: 0.75rem;
         color: $info-gray;
+
+        &_lg {
+            font-size: 1rem;
+        }
     }
 
     &__desc {
